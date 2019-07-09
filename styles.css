@@ -1,0 +1,13 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 80%;
+    height:100%;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    padding-top: 10%;
+ }
+
+ .center {
+   text-align: center;
+ }

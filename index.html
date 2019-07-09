@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VueJS Application</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/cj/vuex-form/master/dist/vuex-form.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/2.0.0/vuex.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="card">
+                <p><b>Total Salary / Month (in Rs.): </b>
+                    <input type ="numeric" Name ="" :keyup="testSalary()" v-model="salary" id="salary">
+                </p>
+    
+                <p><b>Total Working Days / Month (in Days): </b>
+                    <input type ="numeric" Name ="" :keyup="testDay()" v-model="working" id="working">
+                </p>
+    
+                <p><b>Total Hours / Day (in Hours): </b>
+                    <input type ="numeric" Name ="" :keyup="testHour()" v-model="time" id="time">
+                </p>
+
+                <p>
+                    <button v-on:click="calculate()" type="button" >Calculate</button>
+                    <p>You earn RS.{{ this.hourlyPrice.toFixed(2) }} per Hour</p>
+                </p>
+    
+                <p><input type ="numeric" Name ="" :keyup="testInput()" v-model="input" id="input"> Rs.</p>
+
+                <p>
+                    <button v-on:click="mainResult()" type="button" >Result</button>
+                    <p>Total time taken to achieve RS.{{ this.input }} is {{ this.timeToAchieveResult.toFixed(2) }} Hours</p>
+                </p>
+                
+                <q>It needs {{ timeConvert() }} of your work.</q>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+
+</html>
